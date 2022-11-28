@@ -26,6 +26,8 @@ services:
     image: postgres:13-alpine
     volumes:
       - dev-db-data:/ver/lib/postgresql/data
+    ports:
+      - "5431:5432"
     environment:
       - POSTGRES_DB=devdb
       - POSTGRES_USER=devuser
